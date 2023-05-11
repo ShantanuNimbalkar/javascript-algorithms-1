@@ -34,6 +34,8 @@ modules:
  - name: gamma_cxx
    enabled: false
  - name: eslint
-   #config:
-    # - name: use_config_from_source
-     #  value: .eslintrc.json
+   config:      
+    - name: use_config_from_source
+      type: text
+      required: true
+      value: .eslintrc
