@@ -1,21 +1,40 @@
 {
     "gammaAccess": {
-        "url": "http://localhost:3001",
-        "token": "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTY5NDA4OTcxMTc2NCwiaWF0IjoxNjk0MDg5NzExfQ.TeL-VpDlhY1qyAux3p_ZzKcnWGGcOusmqP0ZNB6vwtimI5v0cyJj1Qeb65HG9RQgL1dPm7MBm319vpTyZ6cPdw"
+        "url": "",
+        "token": ""
     },
     "repositories": [
         {
-            "dataDir": "$WORKSPACE/temptk8",
+            "dataDir": "",
             "repository": {
-                "uid": "d5d2c4515034e3e46baadb44a7823385",
-                "projectName": "Java",
+                "uid": "bdb3170af07ae901a0d60c1f9e11df44",
+                "projectName": "javascript",
                 "languages": [
-                    "JAVA"
+                    "JAVASCRIPT"
                 ],
                 "sources": {
-                    "baseDir": "$WORKSPACE",
+                    "baseDir": "",
                     "exclusions": [
-                        "(?i)(test|generated|mock|thirdparty|third-party|3rd-party|3rdparty|external)"
+                        "node_modules",
+                        ".min.js",
+                        "dist",
+                        "external",
+                        "assets",
+                        "gulp",
+                        "grunt",
+                        "libs",
+                        "-bundle.js",
+                        ".bundle.js",
+                        "swagger-ui",
+                        ".config.js",
+                        "-config.js",
+                        "UNKNOWN_FILE",
+                        ".git",
+                        ".ebextensions",
+                        "test",
+                        ".lib",
+                        ".library",
+                        ".zip"
                     ]
                 }
             },
@@ -26,22 +45,7 @@
             "modules": {
                 "codeissues": [
                     {
-                        "name": "embold_sec",
-                        "enabled": false,
-                        "config": {
-                            "rules": [],
-                            "options": [
-                                {
-                                    "name": "reportDir",
-                                    "type": "upload",
-                                    "value": "",
-                                    "required": true
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "name": "gamma_java",
+                        "name": "eslint",
                         "enabled": true,
                         "config": {
                             "rules": [],
@@ -49,50 +53,20 @@
                         }
                     },
                     {
-                        "name": "gamma_generic",
+                        "name": "jshint",
                         "enabled": false,
                         "config": {
                             "rules": [],
-                            "options": [
-                                {
-                                    "name": "reportDir",
-                                    "type": "upload",
-                                    "value": "",
-                                    "required": true
-                                }
-                            ]
+                            "options": []
                         }
                     },
                     {
-                        "name": "pmd",
+                        "name": "gamma_generic",
                         "enabled": true,
                         "config": {
                             "rules": [],
                             "options": [
                                 {
-                                    "name": "javaVersion",
-                                    "type": "text",
-                                    "value": "1.8",
-                                    "required": false
-                                },
-                                {
-                                    "name": "ruleSets",
-                                    "type": "text",
-                                    "value": "",
-                                    "required": true
-                                }
-                            ]
-                        }
-                    }
-                ],
-                "coverage": [
-                    {
-                        "name": "clover",
-                        "enabled": false,
-                        "config": {
-                            "rules": [],
-                            "options": [
-                                {
                                     "name": "reportDir",
                                     "type": "upload",
                                     "value": "",
@@ -102,48 +76,18 @@
                         }
                     },
                     {
-                        "name": "jacoco",
-                        "enabled": false,
+                        "name": "gamma_js",
+                        "enabled": true,
                         "config": {
                             "rules": [],
-                            "options": [
-                                {
-                                    "name": "binaryReportPath",
-                                    "type": "upload",
-                                    "value": "",
-                                    "required": false
-                                },
-                                {
-                                    "name": "xmlReportPath",
-                                    "type": "upload",
-                                    "value": "",
-                                    "required": false
-                                }
-                            ]
-                        }
-                    }
-                ],
-                "unittest": [
-                    {
-                        "name": "junit",
-                        "enabled": false,
-                        "config": {
-                            "rules": [],
-                            "options": [
-                                {
-                                    "name": "reportDir",
-                                    "type": "upload",
-                                    "value": "",
-                                    "required": true
-                                }
-                            ]
+                            "options": []
                         }
                     }
                 ],
                 "relevance": [
                     {
                         "name": "relevance",
-                        "enabled": false,
+                        "enabled": true,
                         "config": {
                             "rules": [],
                             "options": []
@@ -153,7 +97,7 @@
                 "report_processor": [
                     {
                         "name": "ext_report_processor",
-                        "enabled": false,
+                        "enabled": true,
                         "config": {
                             "rules": [],
                             "options": [
